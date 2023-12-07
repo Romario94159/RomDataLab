@@ -2,31 +2,138 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Página Web</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Portafolio</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(""); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      color: #000000;
+    }
+
+    header {
+      background-color: #4e4e4ef9;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    /* Estilos para la imagen en el header */
+    header img {
+      border-radius: 50%; /* Hace que la imagen tenga bordes redondos */
+      width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+      height: 150px; /* Ajusta la altura de la imagen según tus necesidades */
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Bienvenido a Mi Página Web</h1>
+    <img src="https://media.licdn.com/dms/image/D4E03AQFwHcGisjxEig/profile-displayphoto-shrink_800_800/0/1692032962718?e=1707350400&v=beta&t=vza7_5GlJa4tgbK5DO4M_sQ2yDlJp8QaMu9V5nt0F9A" alt="Imagen de perfil"> <!-- Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen -->
+    <br>
+    <h1>Romario Albán</h1>
+    <h1>(Data Analyst)</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <!-- Sección de modelos -->
-    <section class="modelos">
-      <h2>Modelos Actuales</h2>
-      <!-- ... Tu contenido de modelos aquí ... -->
+    <section id="inicio" style="display: flex; flex-direction: column;">
+        <h2>Bienvenido a mi portafolio</h2>
+        <div style="display: flex; flex-direction: row;">
+            <div style="flex: 1; text-align: justify;">
+                <p>¡Hola soy Romario! Es un placer darles la bienvenida a este espacio donde convergen el análisis de datos, la creatividad y el descubrimiento de historias ocultas tras los números. Hoy, los datos son la materia prima que impulsa el mundo, y aquí les invito a adentrarse en el fascinante universo del análisis de datos.</p>
+                    <p>En esta travesía, encontrarán una recopilación de proyectos y estudios donde los datos han sido el centro de atención. Cada gráfico, cada tabla y cada resultado es el resultado de un arduo trabajo, donde la curiosidad y la precisión se han unido para revelar patrones, tendencias y valiosa información.</p>
+                        <p>En mi enfoque, el análisis de datos es mucho más que simples cifras; es el arte de contar historias mediante la interpretación inteligente de información. Es la capacidad de transformar datos en conocimiento, de convertir lo complejo en comprensible y de generar impacto a través de la toma de decisiones fundamentadas.</p>
+                            <p>A lo largo de esta presentación, podrán sumergirse en proyectos que abarcan diferentes industrias y problemáticas, desde la salud hasta las finanzas, pasando por la educación, el marketing y más. Cada proyecto es un testimonio del poder que posee el análisis de datos para resolver problemas, anticipar tendencias y proporcionar soluciones innovadoras.</p>
+                                <p>Les invito a explorar, cuestionar y reflexionar sobre el potencial transformador de los datos en el mundo actual. Este portafolio es un testimonio de mi compromiso con la excelencia, la ética y el valor de los datos como herramienta para el progreso.</p>
+                                    <p>Gracias por acompañarme en este recorrido.</p>
+                                        <p>Espero que disfruten la experiencia y que encuentren inspiración en la magia que reside detrás de los datos.</p>
+                </p>
+                
+                <p>¡Bienvenidos al fascinante mundo del análisis de datos!</p>
+            </div>
+            <div style="flex: 1; margin-left: 20px;">
+                <img src="https://www.esic.edu/sites/default/files/2022-05/analisis-de-datos.jpg" alt="Descripción de la imagen" style="width: 600px;">
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <p>Aquí puedes escribir información sobre ti y tus habilidades.</p>
     </section>
 
-    <!-- Inserción del informe de Power BI -->
-    <section>
-      <h2>Informe de Power BI</h2>
-      <!-- Aquí pega el código de inserción proporcionado por Power BI entre las comillas del atributo src -->
+    <section id="trabajos">
+      <h2>Mis Trabajos</h2>
+      <!-- Inserta el informe de Power BI aquí -->
       <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZDY0MWM2ZDAtNjI5Yy00MTQ0LTg2ZjAtMzAyMmRjOTNkNmM1IiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+      <br>
+      <iframe title="Report Section" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNzljYjczMTQtODU0NS00ZTg3LTg0YjctNGFlMTQzMzJiYjRkIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Puedes contactarme en: <a href="https://www.linkedin.com/in/romario-alban-4621a3100/" target="_blank">Mi perfil de LinkedIn</a></p>
     </section>
   </main>
 
   <footer>
-    <p>Derechos reservados &copy; 2023</p>
+    <p>&copy; 2023 - Derechos reservados</p>
   </footer>
 </body>
 </html>
+
