@@ -9,9 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url(""); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen de fondo */
-      background-size: cover;
-      background-position: center;
+
       color: #000000;
     }
 
@@ -53,7 +51,7 @@
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     iframe {
@@ -87,9 +85,11 @@
   </header>
 
   <main>
-    <section id="inicio" style="display: flex; flex-direction: column;">
-        <h2>Bienvenido a mi portafolio</h2>
-        <div style="display: flex; flex-direction: row;">
+
+    <section id="inicio" style="display: flex; flex-direction: column; background-image: url('https://www.esic.edu/sites/default/files/2022-05/analisis-de-datos.jpg'); background-size: cover; background-position: center; color: white; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+        <h2 style="z-index: 1;">Bienvenido a mi portafolio</h2>
+        <div style="display: flex; flex-direction: row; z-index: 1;">
             <div style="flex: 1; text-align: justify;">
                 <p>¡Hola soy Romario! Es un placer darles la bienvenida a este espacio donde convergen el análisis de datos, la creatividad y el descubrimiento de historias ocultas tras los números. Hoy, los datos son la materia prima que impulsa el mundo, y aquí les invito a adentrarse en el fascinante universo del análisis de datos.</p>
                     <p>En esta travesía, encontrarán una recopilación de proyectos y estudios donde los datos han sido el centro de atención. Cada gráfico, cada tabla y cada resultado es el resultado de un arduo trabajo, donde la curiosidad y la precisión se han unido para revelar patrones, tendencias y valiosa información.</p>
@@ -102,14 +102,10 @@
                 
                 <p>¡Bienvenidos al fascinante mundo del análisis de datos!</p>
             </div>
-            <div style="flex: 1; margin-left: 20px;">
-                <img src="https://www.esic.edu/sites/default/files/2022-05/analisis-de-datos.jpg" alt="Descripción de la imagen" style="width: 600px;">
-            </div>
+            
         </div>
     </section>
-    
-    
-    
+      
     
 
     <section id="sobre-mi">
