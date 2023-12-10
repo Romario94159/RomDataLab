@@ -9,7 +9,6 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-
       color: #000000;
     }
 
@@ -66,11 +65,38 @@
       background-color: #333;
       color: #fff;
     }
+
+    /* Estilos para la galería horizontal de Power BI */
+    .powerbi-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth; /* Desplazamiento suave */
+    }
+    /* Estilos para la galería de imágenes */
+    .image-gallery {
+      display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    margin-top: 20px;
+    }
+
+    .image-gallery img {
+      max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+      height: auto;
+      margin-right: 10px; /* Espacio entre las imágenes */
+      }
+
+    .powerbi-gallery iframe {
+      width: 50%; /* Ajusta el ancho según la cantidad de iframes */
+      min-width: 400px; /* Establece un ancho mínimo para mantener el tamaño */
+      flex-shrink: 0;
+      margin-right: 20px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://media.licdn.com/dms/image/D4E03AQFwHcGisjxEig/profile-displayphoto-shrink_800_800/0/1692032962718?e=1707350400&v=beta&t=vza7_5GlJa4tgbK5DO4M_sQ2yDlJp8QaMu9V5nt0F9A" alt="Imagen de perfil"> <!-- Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen -->
+    <img src="https://media.licdn.com/dms/image/D4E03AQFwHcGisjxEig/profile-displayphoto-shrink_800_800/0/1692032962718?e=1707350400&v=beta&t=vza7_5GlJa4tgbK5DO4M_sQ2yDlJp8QaMu9V5nt0F9A" alt="Imagen de perfil">
     <br>
     <h1>Romario Albán</h1>
     <h1>(Data Analyst)</h1>
@@ -86,39 +112,37 @@
 
   <main>
 
-    <section id="inicio" style="display: flex; flex-direction: column; background-image: url('https://www.esic.edu/sites/default/files/2022-05/analisis-de-datos.jpg'); background-size: cover; background-position: center; color: white; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
-        <h2 style="z-index: 1;">Bienvenido a mi portafolio</h2>
-        <div style="display: flex; flex-direction: row; z-index: 1;">
-            <div style="flex: 1; text-align: justify;">
-                <p>¡Hola soy Romario! Es un placer darles la bienvenida a este espacio donde convergen el análisis de datos, la creatividad y el descubrimiento de historias ocultas tras los números. Hoy, los datos son la materia prima que impulsa el mundo, y aquí les invito a adentrarse en el fascinante universo del análisis de datos.</p>
-                    <p>En esta travesía, encontrarán una recopilación de proyectos y estudios donde los datos han sido el centro de atención. Cada gráfico, cada tabla y cada resultado es el resultado de un arduo trabajo, donde la curiosidad y la precisión se han unido para revelar patrones, tendencias y valiosa información.</p>
-                        <p>En mi enfoque, el análisis de datos es mucho más que simples cifras; es el arte de contar historias mediante la interpretación inteligente de información. Es la capacidad de transformar datos en conocimiento, de convertir lo complejo en comprensible y de generar impacto a través de la toma de decisiones fundamentadas.</p>
-                            <p>A lo largo de esta presentación, podrán sumergirse en proyectos que abarcan diferentes industrias y problemáticas, desde la salud hasta las finanzas, pasando por la educación, el marketing y más. Cada proyecto es un testimonio del poder que posee el análisis de datos para resolver problemas, anticipar tendencias y proporcionar soluciones innovadoras.</p>
-                                <p>Les invito a explorar, cuestionar y reflexionar sobre el potencial transformador de los datos en el mundo actual. Este portafolio es un testimonio de mi compromiso con la excelencia, la ética y el valor de los datos como herramienta para el progreso.</p>
-                                    <p>Gracias por acompañarme en este recorrido.</p>
-                                        <p>Espero que disfruten la experiencia y que encuentren inspiración en la magia que reside detrás de los datos.</p>
-                </p>
-                
-                <p>¡Bienvenidos al fascinante mundo del análisis de datos!</p>
-            </div>
-            
+    <section id="inicio" style="display: flex; flex-direction: column;">
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; "></div>
+      <h2>Bienvenido a mi portafolio</h2>
+      <div style="display: flex; flex-direction: row;">
+        <div style="flex: 1; text-align: justify;">
+          <p>¡Hola soy Romario! Es un placer darles la bienvenida a este espacio donde convergen el análisis de datos, la creatividad y el descubrimiento de historias ocultas tras los números. Hoy, los datos son la materia prima que impulsa el mundo, y aquí les invito a adentrarse en el fascinante universo del análisis de datos.</p>
+          <!-- ... (resto del contenido) -->
         </div>
+      </div>
     </section>
-      
-    
 
     <section id="sobre-mi">
       <h2>Sobre Mí</h2>
       <p>Aquí puedes escribir información sobre ti y tus habilidades.</p>
+      <div class="image-gallery">
+        <img src="ruta_a_tu_imagen_1.jpg" alt="Descripción de la imagen 1">
+        <img src="ruta_a_tu_imagen_2.jpg" alt="Descripción de la imagen 2">
+        <img src="ruta_a_tu_imagen_3.jpg" alt="Descripción de la imagen 3">
+        <!-- Agrega más imágenes aquí con la misma estructura -->
+      </div>
     </section>
 
     <section id="trabajos">
       <h2>Mis Trabajos</h2>
-      <!-- Inserta el informe de Power BI aquí -->
-      <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZDY0MWM2ZDAtNjI5Yy00MTQ0LTg2ZjAtMzAyMmRjOTNkNmM1IiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
-      <br>
-      <iframe title="Report Section" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiNzljYjczMTQtODU0NS00ZTg3LTg0YjctNGFlMTQzMzJiYjRkIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+      <!-- Galería horizontal de informes de Power BI -->
+      <div class="powerbi-gallery">
+        <iframe width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZDY0MWM2ZDAtNjI5Yy00MTQ0LTg2ZjAtMzAyMmRjOTNkNmM1IiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="Report Section" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNzljYjczMTQtODU0NS00ZTg3LTg0YjctNGFlMTQzMzJiYjRkIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="Report Section" width="600" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZjJiOTVjYjAtNzU2OS00MjQ0LTllZjgtMWIzZWEwZTRjOWViIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <!-- Agrega más iframes de Power BI aquí -->
+      </div>
     </section>
 
     <section id="contacto">
@@ -132,4 +156,3 @@
   </footer>
 </body>
 </html>
-
