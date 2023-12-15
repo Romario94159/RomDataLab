@@ -277,6 +277,20 @@
         overflow: hidden; /* Oculta el exceso del mapa si lo hubiera */
       }
 
+      /* Estilos para el encabezado fijo */
+    #stickyHeader {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+      background-color: #0099f8f9; /* Color de fondo del encabezado */
+      padding: 5px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+
 
     </style>
 
@@ -288,7 +302,7 @@
   </head>
 
   <body>
-    <header>
+    <header id="stickyHeader">
 
       <img src="https://media.licdn.com/dms/image/D4E03AQFwHcGisjxEig/profile-displayphoto-shrink_800_800/0/1692032962718?e=1707350400&v=beta&t=vza7_5GlJa4tgbK5DO4M_sQ2yDlJp8QaMu9V5nt0F9A" alt="Imagen de perfil">
       
