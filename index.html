@@ -1,193 +1,442 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Portafolio</title>
-  <style>
-    /* Estilos generales */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #000000;
-    }
+  <head>
+    <meta charset="UTF-8">
 
-    header {
-      background-color: #0099f8f9;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px 0;
-    }
+    <title>Portafolio</title>
 
-    header h1 {
-      margin: 0;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    /* Estilos para la imagen en el header */
-    header img {
-      border-radius: 50%; /* Hace que la imagen tenga bordes redondos */
-      width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
-      height: 150px; /* Ajusta la altura de la imagen según tus necesidades */
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    section {
-      margin-bottom: 20px;
-    }
-
-    iframe {
-      display: block;
-      margin: 0 auto;
-      border: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px 0;
-      background-color: #0099f8f9;
-      color: #fff;
-    }
-
-    /* Estilos para la galería horizontal de Power BI */
-    .powerbi-gallery {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth; /* Desplazamiento suave */
-    }
-    /* Estilos para la galería de imágenes */
-    
-
-    .powerbi-gallery iframe {
-      width: 100%; /* Ajusta el ancho según la cantidad de iframes */
-      min-width: 100px; /* Establece un ancho mínimo para mantener el tamaño */
-      flex-shrink: 0;
-      margin-right: 10px;
-    }
-
-    .image-gallery {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth; /* Desplazamiento suave */
-      margin-top: 20px;
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #0099f8f9;
       }
 
-    .image-gallery img {
-      max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
-      height: auto;
-      margin-right: 100px; /* Espacio entre las imágenes */
+      header {
+        background-color: #0099f8f9;
+        color: #ffffff;
+        text-align: center;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+      header h1 {
+      color: #faf9f9; /* Color rojo claro */
+      font-style: italic; /* Texto en cursiva */
       }
 
-  </style>
-</head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+      header h1 {
+        margin: 0;
+        margin-left: 56.69px; /* Aproximadamente 2 cm a 96 ppp */
+      }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<body>
-  <header>
-    <img src="https://media.licdn.com/dms/image/D4E03AQFwHcGisjxEig/profile-displayphoto-shrink_800_800/0/1692032962718?e=1707350400&v=beta&t=vza7_5GlJa4tgbK5DO4M_sQ2yDlJp8QaMu9V5nt0F9A" alt="Imagen de perfil">
-    <br>
-    <h1>Romario Albán</h1>
-    <h1>(Data Analyst)</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre Mí</a></li>
-        <li><a href="#trabajos">Trabajos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-
-    <section id="inicio">
-      <h2>Bienvenido a mi portafolio</h2>
-      <div>
-          <p>¡Hola soy Romario! Es un placer darles la bienvenida a este espacio donde convergen el análisis de datos, la creatividad y el descubrimiento de historias ocultas tras los números. Hoy, los datos son la materia prima que impulsa el mundo, y aquí les invito a adentrarse en el fascinante universo del análisis de datos.</p>
-          <!-- ... (resto del contenido) -->
+         /* Estilos CSS para h1 */
+      h1 {
+        color: #1E90FF; /* Azul claro */
         
-      </div>
-    </section>
+      }
 
-    <section id="sobre-mi">
-      <h2>Sobre Mí</h2>
-      <p>Aquí puedes escribir información sobre ti y tus habilidades.</p>
-      <div class="image-gallery">
-        <a data-fancybox="gallery" href="https://i.imgur.com/8L4LZ4p.png">
-          <img src="https://i.imgur.com/8L4LZ4p.png" alt="Descripción de la imagen 1" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/Vk9wFOn.png">
-          <img src="https://i.imgur.com/Vk9wFOn.png" alt="Descripción de la imagen 2" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/8L4LZ4p.png">
-          <img src="https://i.imgur.com/8L4LZ4p.png" alt="Descripción de la imagen 3" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/jLsLxve.png">
-          <img src="https://i.imgur.com/jLsLxve.png" alt="Descripción de la imagen 4" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/COqah7G.png">
-          <img src="https://i.imgur.com/COqah7G.png" alt="Descripción de la imagen 5" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/NvRdrNG.png">
-          <img src="https://i.imgur.com/NvRdrNG.png" alt="Descripción de la imagen 6" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/kMtxbOa.png">
-          <img src="https://i.imgur.com/kMtxbOa.png" alt="Descripción de la imagen 7" width="3000" height="800">
-        </a>
-        <a data-fancybox="gallery" href="https://i.imgur.com/zn1AHgV.png">
-          <img src="https://i.imgur.com/zn1AHgV.png" alt="Descripción de la imagen 8" width="3000" height="800">
-        </a>
-        <!-- Agrega más imágenes aquí con la misma estructura -->
-      </div>
-    </section>
+      
+      
+      /* Estilos CSS para p */
+      p {
+        color: #333; /* Color de texto gris oscuro */
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 20px;
     
+      }
+
+      nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      /* Estilos para la imagen en el header */
+      header img {
+        border-radius: 50%; /* Hace que la imagen tenga bordes redondos */
+        width: 80px; /* Ajusta el ancho de la imagen según tus necesidades */
+        height: 80px; /* Ajusta la altura de la imagen según tus necesidades */
+        margin-right: 20px; /* Espacio entre la imagen y el título */
+      }
+
+      main {
+        padding: 20px;
+      }
+      main h2 {
+        font-style: italic; /* Aplica el estilo cursiva al h2 */
+      }
+
+      section {
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        display: block;
+        margin: 0 auto;
+        border: none;
+      }
+
+      footer {
+        text-align: center;
+        padding:  20px 0;
+        background-color: #0099f8f9;
+        color: #fff;
+      }
+      footer {
+        margin: 0;
+      }
+
+      footer p {
+        color: #ffffff; /* Color naranja */
+        font-weight: bold; /* Texto en negrita */
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #0099f8f9;
+        color: #fff;
+      }
+
+      .contact-icons a {
+        margin: 0 10px; /* Agrega margen horizontal entre los íconos */
+        font-size: 24px;
+        text-decoration: none;
+      }
+
+      /* Estilos para la galería horizontal de Power BI */
+      .powerbi-gallery {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth; /* Desplazamiento suave */
+      }
+      /* Estilos para la galería de imágenes */
+      
+
+      .powerbi-gallery iframe {
+        width: 50%; /* Ajusta el ancho según la cantidad de iframes */
+        min-width: 20px; /* Establece un ancho mínimo para mantener el tamaño */
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+
+      .image-gallery {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth; /* Desplazamiento suave */
+        margin-top: 20px;
+      }
+
+      .image-gallery img {
+        max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+        height: auto;
+        margin-right: 2%; /* Espacio entre las imágenes */
+      }
+      
+      .image-gallery img:hover {
+        opacity: 0.7; /* Reducir la opacidad al pasar el cursor */
+          /* Agregar cualquier otro efecto deseado al pasar el cursor */
+      }
     
+      /* Agrega transiciones suaves */
+      .tab-content {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
 
-    <section id="trabajos">
-      <h2>Mis Trabajos</h2>
-      <!-- Galería horizontal de informes de Power BI -->
-      <div class="powerbi-gallery">
-        <iframe width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZDY0MWM2ZDAtNjI5Yy00MTQ0LTg2ZjAtMzAyMmRjOTNkNmM1IiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="Report Section" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNzljYjczMTQtODU0NS00ZTg3LTg0YjctNGFlMTQzMzJiYjRkIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
-        <iframe title="Report Section" width="600" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZjJiOTVjYjAtNzU2OS00MjQ0LTllZjgtMWIzZWEwZTRjOWViIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
-        <!-- Agrega más iframes de Power BI aquí -->
-      </div>
-    </section>
+      .tab-content.active {
+        display: block;
+        opacity: 1;
+      }
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>
-        Puedes contactarme en:</p>
+          /* Estilos para el formulario */
+      form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: calc(100% - 12px);
+        padding: 6px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      input[type="submit"] {
+        background-color: #0099f8f9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0077cc;
+      }
+
+      /* Estilo para el mensaje de éxito */
+      #mensajeExito {
+        color: green;
+        margin-top: 10px;
+      }
+
+        /* Estilos para la sección de inicio */
+      .content-with-image {
+        display: flex;
+        align-items: center;
+        /* Agrega más estilos según sea necesario */
+      }
+
+      .content-with-image img {
+        max-width: 600px; /* Ajusta el ancho máximo de la imagen */
+        margin-right: 10px; /* Espacio entre la imagen y el texto */
+      }
+      /* Estilos para el encabezado en dispositivos móviles */
+      @media screen and (max-width: 767px) {
+        header {
+          padding: 10px 0; /* Cambia el relleno del encabezado en dispositivos móviles */
+        }
+
+        header h1 {
+          font-size: 24px; /* Cambia el tamaño del texto del título para dispositivos móviles */
+        }
+
+        header h2 {
+          font-size: 18px; /* Cambia el tamaño del texto del subtítulo para dispositivos móviles */
+        }
+      }
+
+      /* Estilos para la sección de inicio en dispositivos móviles */
+      @media screen and (max-width: 767px) {
+        .content-with-image {
+          flex-direction: column; /* Cambia la dirección del contenido con imagen para dispositivos móviles */
+        }
+
+        .content-with-image img {
+          max-width: 100%; /* Ajusta el ancho máximo de la imagen para dispositivos móviles */
+          margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
+          margin-bottom: 10px; /* Agrega un margen inferior en dispositivos móviles */
+        }
+      }
+
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+  </head>
+
+  <body>
+    <header>
+
+      <img src="https://media.licdn.com/dms/image/D4E03AQFwHcGisjxEig/profile-displayphoto-shrink_800_800/0/1692032962718?e=1707350400&v=beta&t=vza7_5GlJa4tgbK5DO4M_sQ2yDlJp8QaMu9V5nt0F9A" alt="Imagen de perfil">
+      
+      <h1>Romario Albán</h1>
+        
+      
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#trabajos">Trabajos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+ 
+
+    </header>
+
+    <main>
+
+      <section id="inicio" class="tab-content">
+        <h2>Bienvenido a mi portafolio</h2>
+        <div>
+
+        </div>
+        <div class="content-with-image">
+          <img src="https://interactivechaos.com/sites/default/files/2018-12/servicio_analisis_datos_0.jpg" alt="Descripción de la imagen">
+          <div>
+            <p>¿Quieres descubrir el poder oculto detrás de los números? ¡Déjame ser tu guía en este fascinante viaje del análisis de datos!</p> 
+            
+            <p>Hola! Soy Romario y estoy emocionado de dar la bienvenida a este espacio donde convergen la ciencia de los datos, la creatividad y el arte de desentrañar historias cautivadoras a partir de cifras aparentemente simples. En un mundo donde los datos son la piedra angular, te invito a explorar cómo esta materia prima impulsa nuestro día a día.</p>
+  
+            <p>Aquí, no solo aprenderás sobre el análisis de datos, sino que también experimentarás cómo la creatividad se fusiona con la interpretación de la información. Descubrirás cómo los datos son mucho más que simples valores, son relatos escondidos que esperan ser revelados. Acompáñame en este emocionante viaje para destapar el potencial narrativo y transformador que encierran los datos.</p>
+  
+            <p>Sumérgete en este fascinante universo donde la curiosidad se convierte en descubrimiento, la interpretación se convierte en narrativa y los números se transforman en historias que impactan. ¿Listo para desafiar tus límites y explorar las infinitas posibilidades que yacen detrás de cada conjunto de datos? ¡Únete a nosotros y descubre cómo los números pueden contarnos historias que nunca imaginaste!</p>
+
+            <!-- ... (mas contenido) -->
+          </div>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="tab-content">
+        <h2>Sobre Mí</h2>
+        <p>Aquí puedes escribir información sobre ti y tus habilidades.</p>
+        <div class="image-gallery">
+
+          <a data-fancybox="gallery" href="https://i.imgur.com/Vk9wFOn.png">
+            <img src="https://i.imgur.com/Vk9wFOn.png" alt="Descripción de la imagen 2" width="800" height="500">
+          </a>
+          <a data-fancybox="gallery" href="https://i.imgur.com/8L4LZ4p.png">
+            <img src="https://i.imgur.com/8L4LZ4p.png" alt="Descripción de la imagen 3" width="800" height="500">
+          </a>
+          <a data-fancybox="gallery" href="https://i.imgur.com/jLsLxve.png">
+            <img src="https://i.imgur.com/jLsLxve.png" alt="Descripción de la imagen 4" width="800" height="500">
+          </a>
+          <a data-fancybox="gallery" href="https://i.imgur.com/COqah7G.png">
+            <img src="https://i.imgur.com/COqah7G.png" alt="Descripción de la imagen 5" width="800" height="500">
+          </a>
+          <a data-fancybox="gallery" href="https://i.imgur.com/NvRdrNG.png">
+            <img src="https://i.imgur.com/NvRdrNG.png" alt="Descripción de la imagen 6" width="800" height="500">
+          </a>
+          <a data-fancybox="gallery" href="https://i.imgur.com/kMtxbOa.png">
+            <img src="https://i.imgur.com/kMtxbOa.png" alt="Descripción de la imagen 7" width="800" height="500">
+          </a>
+          <a data-fancybox="gallery" href="https://i.imgur.com/zn1AHgV.png">
+            <img src="https://i.imgur.com/zn1AHgV.png" alt="Descripción de la imagen 8" width="800" height="500">
+          </a>
+          <!-- Agrega más imágenes aquí con la misma estructura -->
+        </div>
+      </section>
+      
+      
+
+      <section id="trabajos" class="tab-content">
+        <h2>Mis Trabajos</h2>
+        <!-- Galería horizontal de informes de Power BI -->
+        <div class="powerbi-gallery">
+          <iframe title="Report Section" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZDY0MWM2ZDAtNjI5Yy00MTQ0LTg2ZjAtMzAyMmRjOTNkNmM1IiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+          <iframe title="Report Section" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNzljYjczMTQtODU0NS00ZTg3LTg0YjctNGFlMTQzMzJiYjRkIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+          <iframe title="Report Section" width="800" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZjJiOTVjYjAtNzU2OS00MjQ0LTllZjgtMWIzZWEwZTRjOWViIiwidCI6IjljOTAyMmNiLWI5NGMtNGExNi05OTJiLWFjOTRhZGQ0NTk3MyJ9" frameborder="0" allowFullScreen="true"></iframe>
+          <!-- Agrega más iframes de Power BI aquí -->
+        </div>
+      </section>
+
+      <section id="contacto" class="tab-content">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme en:</p>
         <p><a href="https://www.linkedin.com/in/romario-alban-4621a3100/" target="_blank" style="color: blue;"><i class=" fab fa-linkedin"></i> LinkedIn </a></p>
         <p><a href="https://api.whatsapp.com/send?phone=593969268670" target="_blank" style="color: green;"><i class="fab fa-whatsapp"></i> WhatsApp </a></p>
-        <p><a href="romariodataLab@tzero2.com" style="color: rgb(255, 0, 102);" ><i class="far fa-envelope"></i> Correo de Microsoft </a>
-        </p>
-    </section>
-  </main>
+        <p><a href="mailto:romariodataLab@tzero2.com" style="color: rgb(255, 0, 102);"><i class="far fa-envelope"></i> Correo de Microsoft</a></p>
 
-  <footer>
-    <p>&copy; 2023 - Derechos reservados</p>
-    <p>Designed by RomDataLab</p>
-  </footer>
-</body>
+        <!-- Formulario de contacto -->
+        <h2>Formulario de Contacto</h2>
+
+        <form action="https://formspree.io/f/mqkrzzwj" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+          
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+          
+          <input type="submit" value="Enviar">
+        </form>
+        
+        
+        <div id="mensajeExito" style="display: none;">
+          <p>¡Formulario enviado correctamente!</p>
+        </div>
+ 
+        
+
+        <h2>Ubicación</h2>
+        <div id="mapa" style="width: 100%; height: 400px;"></div>
+      
+
+        
+        
+      </section>
+
+    </main> 
+    
+    <footer>
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/romario-alban-4621a3100/" target="_blank" style="color: rgb(255, 255, 255);"><i class="fab fa-linkedin"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=593969268670" target="_blank" style="color: rgb(255, 255, 255);"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:romariodataLab@tzero2.com" style="color: rgb(252, 252, 252);"><i class="far fa-envelope"></i></a>
+        <!-- Agrega más íconos y enlaces según tus necesidades -->
+      </div>
+      <p>&copy; 2023 - Derechos reservados</p>
+      <p>Designed by RomDataLab</p>
+      <p>#DataAnalyst #PowerApps #BigData #PowerBi #PowerAutomate</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?key=AhLThlyrgd2RHz73npVU-f1eyTW7-tKCGiekTBKWkVVHGFJWyL-BFgbW5VKi1sk-"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".tab-content:first").addClass("active");
+
+        // Selector más específico para los enlaces del menú
+        $("nav ul li a[href^='#']").click(function(e){
+          e.preventDefault();
+          var tab_id = $(this).attr("href");
+          $(".tab-content").removeClass("active");
+          $(tab_id).addClass("active");
+        });
+      });
+  
+    
+      function initMap() {
+        var mapOptions = {
+          key: 'AhLThlyrgd2RHz73npVU-f1eyTW7-tKCGiekTBKWkVVHGFJWyL-BFgbW5VKi1sk-', // Reemplaza 'TU_CLAVE_DE_API' por tu clave de API válida
+          center: new Microsoft.Maps.Location(-0.570872, -79.371894),
+          mapTypeId: Microsoft.Maps.MapTypeId.road,
+          zoom: 12
+        };
+        
+        var map = new Microsoft.Maps.Map(document.getElementById('mapa'), mapOptions);
+        // Puedes agregar marcadores u otras capas al mapa aquí si lo deseas
+      }
+  
+      // Llama a la función initMap después de que se cargue el script de Bing Maps
+    window.addEventListener('load', function () {
+      initMap();
+    });
+    </script>
+
+
+  </body>
 </html>
