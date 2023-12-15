@@ -277,19 +277,24 @@
         overflow: hidden; /* Oculta el exceso del mapa si lo hubiera */
       }
 
-      /* Estilos para el encabezado fijo */
-    #stickyHeader {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
-      background-color: #0099f8f9; /* Color de fondo del encabezado */
-      padding: 5px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-direction: row;
-    }
+   /* Estilos para el encabezado fijo */
+      #stickyHeader {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #0099f8f9;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+      }
+
+      /* Estilos para el contenido principal */
+      #mainContent {
+        margin-top: 60px; /* Ajusta este valor según la altura del encabezado */
+      }
 
 
     </style>
@@ -322,7 +327,7 @@
 
     </header>
 
-    <main>
+    <main id="mainContent">
 
       <section id="inicio" class="tab-content">
         <h2>Bienvenido a mi portafolio</h2>
