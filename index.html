@@ -72,6 +72,11 @@
         height: 80px; /* Ajusta la altura de la imagen según tus necesidades */
         margin-right: 20px; /* Espacio entre la imagen y el título */
       }
+      /* Estilo para el borde blanco alrededor de la imagen del encabezado */
+      header img {
+        border: 3px solid #fff; /* Borde blanco de 3 píxeles */
+      }
+
 
       main {
         padding: 20px;
@@ -80,8 +85,18 @@
         font-style: italic; /* Aplica el estilo cursiva al h2 */
       }
 
+      /* Estilo para subrayar los h2 en el cuerpo del documento */
+      main h2 {
+        text-decoration: underline; /* Agrega subrayado */
+      }
+
+
       section {
         margin-bottom: 20px;
+      }
+
+      #contacto a {
+        text-decoration: none;
       }
 
       iframe {
@@ -166,12 +181,13 @@
 
           /* Estilos para el formulario */
       form {
+        flex: 1; /* Ocupa el espacio disponible */
         max-width: 500px;
-        margin: 0 auto;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #f9f9f9;
+        margin-right: 20px;
       }
 
       label {
@@ -252,6 +268,15 @@
           margin-bottom: 10px; /* Agrega un margen inferior en dispositivos móviles */
         }
       }
+
+      #mapa {
+        width: 100%;
+        height: 400px;
+        border: 2px solid rgb(0, 110, 255); /* Borde de 2 píxeles y color azul */
+        border-radius: 10px; /* Borde redondeado */
+        overflow: hidden; /* Oculta el exceso del mapa si lo hubiera */
+      }
+
 
     </style>
 
@@ -380,7 +405,7 @@
         
 
         <h2>Ubicación</h2>
-        <div id="mapa" style="width: 100%; height: 400px;"></div>
+        <div id="mapa"></div>
       
 
         
@@ -419,24 +444,47 @@
       });
   
     
-      function initMap() {
-        var mapOptions = {
-          key: 'AhLThlyrgd2RHz73npVU-f1eyTW7-tKCGiekTBKWkVVHGFJWyL-BFgbW5VKi1sk-', // Reemplaza 'TU_CLAVE_DE_API' por tu clave de API válida
-          center: new Microsoft.Maps.Location(-0.570872, -79.371894),
-          mapTypeId: Microsoft.Maps.MapTypeId.road,
-          zoom: 12
-        };
-        
-        var map = new Microsoft.Maps.Map(document.getElementById('mapa'), mapOptions);
-        // Puedes agregar marcadores u otras capas al mapa aquí si lo deseas
-      }
-  
-      // Llama a la función initMap después de que se cargue el script de Bing Maps
+
+    </script>
+
+   <script>
+    function initMap() {
+      var mapOptions = {
+        credentials: 'T AhLThlyrgd2RHz73npVU-f1eyTW7-tKCGiekTBKWkVVHGFJWyL-BFgbW5VKi1sk-', // Reemplaza 'TuClaveAPI' con tu propia clave de API de Bing Maps
+        center: new Microsoft.Maps.Location(-0.570872, -79.371894),
+        mapTypeId: Microsoft.Maps.MapTypeId.road,
+        zoom: 12,
+        customMapStyle: {
+          elements: {
+            area: { fillColor: '#f5f5f5' },
+            water: { fillColor: '#9fc9eb' },
+            roads: { visible: true, color: '#ffffff' },
+          }
+        },
+        borderColor: 'blue', // Color del borde del mapa
+        borderThickness: 15 // Grosor del borde del mapa
+      };
+
+      var map = new Microsoft.Maps.Map(document.getElementById('mapa'), mapOptions);
+
+      var center = map.getCenter();
+      var pin = new Microsoft.Maps.Pushpin(center, {
+        title: 'RomDataLab',
+        subTitle: '"Transformado datos en estrategias ganadoras"',
+        width: 20,  // Ancho del icono
+        height: 20  // Alto del icono
+      });
+
+ 
+
+      map.entities.push(pin);
+    }
+
     window.addEventListener('load', function () {
       initMap();
     });
-    </script>
 
+   </script>
 
   </body>
 </html>
